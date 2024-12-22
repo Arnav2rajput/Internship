@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: background-color 0.3s, opacity 0.3s; /* Add transition for opacity */
+    z-index: 1000;
+    opacity: 1; /* Start as invisible */ /* Prevent interaction when invisible */
+}
+
+.navbar:hover {
+    opacity: 1; /* Become fully visible on hover */
+    pointer-events: auto; /* Allow interaction when visible */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s, text-decoration 0.3s, transform 0.3s; /* Add transition for transform */
+}
+
+.navbar a:hover {
+    opacity: 1; /* Fully opaque on hover */
+    text-decoration: underline; /* Underline on hover */
+    margin: 0; /* Reset margin to avoid layout shift */
+    text-decoration-color: rgb(124, 55, 124);
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 80px auto; /* Add margin to avoid navbar overlap */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 60px; /* Space for navbar */
+}
+
+p {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
